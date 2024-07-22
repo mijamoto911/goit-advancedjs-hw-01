@@ -43,9 +43,12 @@ const formSubmit = event => {
     return;
   }
 
+  console.log(formData);
+
   event.target.reset();
   localStorage.removeItem('form-data');
+  formData = {};
 };
 
-inputForm.addEventListener('change', formChange);
+inputForm.addEventListener('input', formChange);
 inputForm.addEventListener('submit', formSubmit);
